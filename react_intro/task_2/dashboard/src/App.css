@@ -1,0 +1,35 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* header */
+.App-header { 
+  display: flex;
+  border-bottom: 2px solid #d32e3b;  
+}
+.App-header h1{
+  margin-top: 60px;
+  margin-left: 0px;
+  color: #d32e3b;
+}
+.App-header img{
+  display: flex;
+  width: 150px;
+}
+/* Body*/
+.App-body{
+  display: flex;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+/*footer*/
+.App-footer{
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  border-top: 2px solid #d32e3b;
+}
