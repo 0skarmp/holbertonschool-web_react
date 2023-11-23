@@ -1,0 +1,14 @@
+/* header */
+.App-header { 
+    display: flex;
+    border-bottom: 2px solid #d32e3b;  
+  }
+  .App-header h1{
+    margin-top: 60px;
+    margin-left: 0px;
+    color: #d32e3b;
+  }
+  .App-header img{
+    display: flex;
+    width: 150px;
+  }
