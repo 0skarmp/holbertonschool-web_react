@@ -1,21 +1,26 @@
-import { getFooterCopy, getFullYear, getLatestNotification } from './utils';
+import React from 'react';
+import { expect } from 'chai';
+import { shallow } from 'enzyme';
+import Notifications from './Notifications';
 
-describe("Utils functions", () => {
+describe("Testing the <Notifications /> Component", () => {
 	
-	test("getFullYear returns the correct year", () => {
-		expect(getFullYear()).toEqual(2023);
+	let wrapper;
+
+	beforeEach(() => {
+		wrapper = shallow(<Notifications />);
 	});
 
-	test("getFooterCopy returns the correct string when the argument is true", () => {
-		expect(getFooterCopy(true)).toEqual("Holberton School");
+	it("<Notifications /> is rendered without crashing", () => {
+		expect(wrapper).to.not.be.an('undefined');
 	});
 
-	test("getFooterCopy returns the correct string when the argument is false", () => {
-		expect(getFooterCopy(false)).toEqual("Holberton School main dashboard");
+	it("<Notifications /> renders three list items", () => {
+		expect(wrapper.find('li')).to.have.lengthOf(3);
 	});
 
-	test("getLatestNotification returns the expected string", () => {
-		expect(getLatestNotification()).toEqual("<strong>Urgent requirement</strong> - complete by EOD");
+	it("<Notifications /> render the text 'Here is the list of notifications'", () => {
+		expect(wrapper.contains(<p>Here is the list of notifications</p>)).to.equal(true);
 	});
 
 });
